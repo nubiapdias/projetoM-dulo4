@@ -9,17 +9,16 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   const config = new DocumentBuilder()
-    .setTitle('Projeto 4')
-    .setDescription('API do Projeto')
+    .setTitle('Livraria')
+    .setDescription('API resposável pela Livraria')
     .setVersion('1.0.0')
-    .addTag('status')
     .addTag('users')
+    .addTag('products')
+    .addTag('status')
+    .addTag('tables')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);
 
   await app.listen(3003);
 }
-bootstrap();
-
-
