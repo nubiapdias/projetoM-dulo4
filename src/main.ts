@@ -9,13 +9,18 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   const config = new DocumentBuilder()
-    .setTitle('Livraria')
-    .setDescription('API resposável pela Livraria')
+    .setTitle('Livraria-Café')
+    .setDescription('API resposável pela Livraria-Café')
     .setVersion('1.0.0')
     .addTag('users')
     .addTag('products')
     .addTag('status')
     .addTag('tables')
+    .addTag('categories')
+    .addTag('orders')
+    .addTag('favorites')
+    .addTag('auth')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);
