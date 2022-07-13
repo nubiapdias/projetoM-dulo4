@@ -57,3 +57,4 @@ export class TablesController {
   remove(@Param('id') id: string) {
     return this.tablesService.remove(id);
   }
+}
