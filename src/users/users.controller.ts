@@ -10,7 +10,7 @@ export class UsersController {
 
   @Get()
   getAll() {
-    return this.usersService.getAll();
+    return this.usersService.findAll();
   }
 
   @Post()
